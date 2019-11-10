@@ -1,0 +1,203 @@
+table {
+border-spacing: 0;
+empty-cells: hide;
+margin: 0 auto;
+margin-top: 25px;
+border-radius: 2px;
+border: 1px solid black;
+padding: 10px;
+}
+td {
+padding: 10px 20px;
+text-align: center;
+border-bottom: 1px solid #F4EEE8;
+transition: all 0.5s linear;
+}
+td:first-child {
+text-align: left;
+color: #3D3511;
+}
+tr:first-child{	
+font-weight: bold;
+}
+th {
+padding: 10px 20px;
+color: #3D3511;
+border-bottom: 1px solid #F4EEE8;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+td:nth-child(1) {
+	background: #efefef;
+}
+td:nth-child(2) {
+background: #b8bed4;
+}
+td:nth-child(3) {
+background: #dcb0b6;
+}
+th:nth-child(even)  {
+background: #b8bed4;
+}
+th:nth-child(odd)  {
+background: #d1c7bf;
+}
+.round-top {
+border-top-left-radius: 5px;
+}
+.round-bottom {
+border-bottom-left-radius: 5px;
+}
+tr:hover td{
+background: #0f142225;
+}
+
+.main-form{
+	margin:0px auto;
+	width:400px;
+	border: 1px solid #e2e2e2;
+	border-radius: 10px;
+	margin-top: 50px;
+}
+
+/* === Remove input autofocus webkit === */
+*:focus {outline: none;}
+
+/* === Form Typography === */
+body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
+.main-form h2, .main-form label {font-family:Georgia, Times, "Times New Roman", serif;}
+.form_hint, .required_notification {font-size: 11px;}
+
+/* === List Styles === */
+.main-form ul {
+  list-style-type:none;
+	list-style-position:outside;
+	margin:0px;
+	padding:0px;
+}
+.main-form li{
+	padding:12px; 
+	position:relative;
+	width:400px;
+} 
+
+
+
+.required_notification {
+	color:#d45252; 
+	margin: 5px 0 0 0; 
+	display:inline;
+}
+
+/* === Form Elements === */
+.main-form label {
+	width:150px;
+	margin-top: 3px;
+	display:inline-block;
+	float:left;
+	padding:3px;
+}
+.main-form input {
+	height:30px; 
+	width:220px; 
+	padding:5px 8px;
+}
+.main-form textarea {padding:8px; width:300px;}
+.main-form button {
+	margin-left: 67%;
+}
+
+	/* form element visual styles */
+	.main-form input, .main-form textarea { 
+		border:1px solid #aaa;
+		border-radius:8px;
+		padding-right:30px;
+		-moz-transition: padding .25s; 
+		-webkit-transition: padding .25s; 
+		-o-transition: padding .25s;
+		transition: padding .25s;
+	}
+	.main-form input:focus, .main-form textarea:focus {
+		background: #fff; 
+		border:1px solid #555; 
+		box-shadow: 0 0 3px #aaa; 
+		padding-right:70px;
+	}
+
+/* === HTML5 validation styles === */	
+.main-form input:required, .main-form textarea:required {
+	background: #fff url(../img/red_asterisk.png) no-repeat 98% center;
+}
+.main-form input:required:valid, .main-form textarea:required:valid {
+	background: #fff url(../img/valid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+.main-form input:focus:invalid, .main-form textarea:focus:invalid {
+	background: #fff url(../img/invalid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535
+}
+
+/* === Form hints === */
+.form_hint {
+	background: #d45252;
+	border-radius: 3px 3px 3px 3px;
+	color: white;
+	margin-left:8px;
+	padding: 1px 6px;
+	z-index: 999; /* hints stay above all other elements */
+	position: absolute; /* allows proper formatting if hint is two lines */
+	display: none;
+}
+.form_hint::before {
+	content: "\25C0";
+	color:#d45252;
+	position: absolute;
+	top:1px;
+	left:-6px;
+}
+.main-form input:focus + .form_hint {display: inline;}
+.main-form input:required:valid + .form_hint {background: #28921f;}
+.main-form input:required:valid + .form_hint::before {color:#28921f;}
+	
+/* === Button Style === */
+button.submit {
+	background-color: #68b12f;
+	background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+	background: -webkit-linear-gradient(top, #68b12f, #50911e);
+	background: -moz-linear-gradient(top, #68b12f, #50911e);
+	background: -ms-linear-gradient(top, #68b12f, #50911e);
+	background: -o-linear-gradient(top, #68b12f, #50911e);
+	background: linear-gradient(top, #68b12f, #50911e);
+	border: 1px solid #509111;
+	border-bottom: 1px solid #5b992b;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	box-shadow: inset 0 1px 0 0 #9fd574;
+	-webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+	-moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+	-ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+	-o-box-shadow: 0 1px 0 0 #9fd574 inset;
+	color: white;
+	font-weight: bold;
+	padding: 6px 20px;
+	text-align: center;
+	text-shadow: 0 -1px 0 #396715;
+}
+button.submit:hover {
+	opacity:.85;
+	cursor: pointer; 
+}
+button.submit:active {
+	border: 1px solid #20911e;
+	box-shadow: 0 0 10px 5px #356b0b inset; 
+	-webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+	-moz-box-shadow: 0 0 10px 5px #356b0b inset;
+	-ms-box-shadow: 0 0 10px 5px #356b0b inset;
+	-o-box-shadow: 0 0 10px 5px #356b0b inset;
+	
+}
